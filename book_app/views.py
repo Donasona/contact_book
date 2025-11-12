@@ -36,7 +36,12 @@ class Updatebook(View):
         book.save()
         return render(request,"update.html")
     
- 
+class Deletebook(View):
+    def get(self,request,**kwargs):
+        delete_id=kwargs.get("pk")
+        book=Bookmodel.objects.get(id=delete_id)
+        book.delete()
+        return render(request,"create.html")   
 
 
         
