@@ -15,10 +15,6 @@ class Createbook(View):
         )
         return render(request,"create.html")
     
-class Readbook(View):
-    def get(self,request):
-        data=Bookmodel.objects.all()
-        return render(request,"read.html",{"data":data})
     
 class Updatebook(View):
     def get(self,request,**kwargs):
