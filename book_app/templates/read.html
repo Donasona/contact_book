@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>PHONE NO</th>
+                <th>EMAIL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in data %}
+            <tr>
+                <td>{{book.name}}</td>
+                <td>{{book.phone}}</td>
+                <td>{{book.email}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</body>
+</html>
